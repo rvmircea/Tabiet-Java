@@ -3,13 +3,23 @@ import java.sql.*;
 import java.sql.Connection;
 import java.util.Properties;
 import BazaDeDateExemplu.BdExemplu;
+import com.mysql.cj.protocol.a.NativeUtils;
+
+
 public class Main {
     public static void main(String[] args) throws SQLException {
 
 
 
+    AppUsersDbOperations audop = new AppUsersDbOperations();
 
+    //audop.create("Popescu","Gianina","giani@gmail.com","0236474448","21113232","123456");
 
+    //BdExemplu.commit();
+
+    audop.FindByName("Popescu");
+       BdExemplu.commit();
+    BdExemplu.closeConnection();
 
 
 
